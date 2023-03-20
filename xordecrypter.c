@@ -8,4 +8,6 @@ int main(void) {
 	for (int x = 0; x < sizeof(crowpuke) - 1; x++) {
 		crowpuke[x] = crowpuke[x] ^ key;
 	}
+	
+	return 0;
 }
