@@ -4,7 +4,7 @@
 unsigned char crowpuke[] = "";
 
 int main(void) {
-	char key = 'CROW'; 
+	char key = 'C'; 
 	printf("(+) decoded %d-bytes\n\n\r", sizeof(crowpuke)); 
     printf("unsigned char crowpuke[] = \"");
 	for (int x = 0; x < sizeof(crowpuke) - 1; x++) {
