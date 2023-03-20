@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-/* put shellcode here*/
+/* put your encrypted shellcode here */
 unsigned char crowpuke[] = "blackbird";
 
 int main(void) {
     
-    char key = 'CROW'; /* change the key  */
+    char key = 'CROW'; /* make sure this is the same key used in the encryption process */
     printf("(+) encoded %d-bytes\n\n\r", sizeof(crowpuke));
     printf("unsigned char crowpuke[] = \"");
     for (int x = 0; x<sizeof(crowpuke); x++) {
