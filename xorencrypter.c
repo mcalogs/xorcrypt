@@ -11,6 +11,7 @@ int main(void) {
     for (int x = 0; x<sizeof(crowpuke); x++) {
         printf("\\x%02x", crowpuke[x]^key);
     }
+    
     printf("\";");
     return 0;
 }
