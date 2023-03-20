@@ -16,15 +16,7 @@ put your shellcode in the script, and xor-encode it with a key:
 unsigned char crowpuke[] = "blackbird";
 
 int main(void) {
-    
-    // change the key  
-    char key = 'CROW';
-    printf("(+) encoding %d-bytes\n\n", sizeof(crowpuke));
-    printf("\"");
-    for (int x = 0; x<sizeof(crowpuke); x++) {
-        printf("\\x%02x", crowpuke[x]^key);
-    }
-    printf("\"");
-    return 0;
+    char key = ''; // set your encryption key
+[snip...]
 }
 ```
