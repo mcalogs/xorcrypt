@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /* place encoded shellcode here */
-unsigned char crowpuke[] = "";
+unsigned char crowpuke[] = "encryptedblackbird";
 
 int main(void) {
 	
