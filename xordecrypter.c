@@ -1,13 +1,16 @@
 #include <stdio.h>
 
-unsigned char crowpuke[] = "encodedshellcodehere";
+/* place encoded shellcode here */
+unsigned char crowpuke[] = ""; 
 
 int main(void) {
+	
 	char key = 'CROW'; 
-	printf("(+) decoded xor-encrypted shellcode\n");
 	for (int x = 0; x < sizeof(crowpuke) - 1; x++) {
 		crowpuke[x] = crowpuke[x] ^ key;
+        printf("\\x%02x", crowpuke[x]);
 	}
 	
-	return 0;
+    return 0;
+
 }
