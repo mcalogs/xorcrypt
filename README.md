@@ -44,9 +44,6 @@ PS C:\xorcrypt> .\xordecrypter.exe
 unsigned char crowpuke[] = "\x41\x41\x41\x42\x42\x42\x43\x43\x43\x90\x00\x0a\x00";
 ```
 
-et viola!
-
-
 ## todo
 
 - add in support for bigger keysizes (right now, the program takes in a single char for a key)
