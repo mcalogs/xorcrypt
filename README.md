@@ -21,7 +21,8 @@ once we run the script, we can see the encrypted shellcode:
 
 ```c
 PS C:\xorcrypt> .\xorencrypter.exe
-(+) encoded 13-bytes                                                                                                                                                                           
+(+) encoded 13-bytes
+
 unsigned char crowpuke[] = "\x02\x02\x02\x01\x01\x01\x00\x00\x00\xd3\x43\x49\x43";
 ```
 
@@ -38,7 +39,8 @@ now, we just run it:
 
 ```c
 PS C:\xorcrypt> .\xordecrypter.exe
-(+) decoded 14-bytes                                                                                                                                                                           
+(+) decoded 14-bytes
+
 unsigned char crowpuke[] = "\x41\x41\x41\x42\x42\x42\x43\x43\x43\x90\x00\x0a\x00";
 ```
 
