@@ -5,7 +5,7 @@ unsigned char crowpuke[] = "encryptedblackbird";
 
 int main(void) {
 	
-	char key = 'C'; 
+	char key = 'C'; /* make sure this is the same key used in the encryption process */
 	printf("(+) decoded %d-bytes\n\n\r", sizeof(crowpuke)); 
     printf("unsigned char crowpuke[] = \"");
 	for (int x = 0; x < sizeof(crowpuke) - 1; x++) {
