@@ -7,7 +7,7 @@ unsigned char crowPuke[] = "encryptedblackbird";
 int main(int argc, char* argv[]) {
 
 	if (argc < 2) {
-		printf("(-) usage: xordecrypter.exe <key>");
+		printf("(-) usage: xordecrypter.exe <key>\n");
 		return 1;
 	}
 
