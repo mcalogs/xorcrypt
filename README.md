@@ -1,6 +1,6 @@
 ## `🦊` shellcoder xor-(en|de)crypter
 
-`xorcrypt` is a crypter written in C, that was made for encrypting shellcode for process injection techniques.
+`xorcrypt` is a crypter written in C, that was made for encrypting shellcode for [process injection](https://github.com/cr-0w/maldev) techniques.
 
 ## `🪙` encrypting
 
