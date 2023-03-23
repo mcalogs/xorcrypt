@@ -22,7 +22,8 @@ int main(int argc, char* argv[]) {
         crowPuke[i] ^= key[i % keyLen];
         printf("\\x%02x", crowPuke[i]);
     }
+    
     printf("\";\n");
-
     return 0;
+    
 }
