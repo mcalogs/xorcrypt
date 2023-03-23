@@ -1,50 +1,61 @@
-super simple shellcode XOR-encrypter written in c
+## `🦊` shellcoder xor-(en|de)crypter
 
-```c
-PS C:\xorcrypt> .\xorencrypter.exe
-(+) encoded 10-bytes
+`xorcrypt` is a crypter written in C, that was made for encrypting shellcode for process injection techniques.
 
-unsigned char crowpuke[] = "\x35\x3b\x36\x34\x3c\x35\x3e\x25\x33\x57";
-```
+## `🪙` encrypting
 
-let's take the following bytes as an example of shellcode that we'd like to encrypt/decrypt: **`"\x41\x41\x41\x42\x42\x42\x43\x43\x43\x90\x00\x0a"`**. we would put this into our encoding script:
+to encrypt your shellcode, you just need to populate the shellcode variable in the `xorencrypter` file:
 
-```c
+```cpp
 #include <stdio.h>
+#include <string.h>
 
-/* put shellcode here*/
-unsigned char crowpuke[] = "\x41\x41\x41\x42\x42\x42\x43\x43\x43\x90\x00\x0a";
+/* place shellcode here */
+unsigned char crowPuke[] = "\x41\x42\x43\x90\x90\x90\x90\x00\x0a";
+
 [snip...]
 ```
 
-once we run the script, we can see the encrypted shellcode:
+after compiling, you can supply in a key to encrypt with (you could also just specify the key by changing the `key` variable):
 
-```c
-PS C:\xorcrypt> .\xorencrypter.exe
-(+) encoded 13-bytes
+```cpp
+PS C:\xorcrypt> .\xorencrypter.exe cr0w_waz_here_666
+(*) encoding with key: cr0w_waz_here_666
+(+) encoded 7-bytes
 
-unsigned char crowpuke[] = "\x02\x02\x02\x01\x01\x01\x00\x00\x00\xd3\x43\x49\x43";
+unsigned char crowPuke[] = "\x22\x30\x73\xe7\xcf\xe7\xf1";
 ```
 
-with this newly encrypted shellcode: **`"\x35\x3b\x36\x34\x3c\x35\x3e\x25\x33\x57\x57"`**, we could put this in our decrypter script to get the original unencrypted bytes back. first, we put the encrypted shellcode into our decrypter script:
+you now have encrypted shellcode to work with! 
 
-```c
+## `🔖` decrypting
+
+to decrypt it, you can populate the shellcode variable in the `xordecrypter` file:
+
+```cpp
 #include <stdio.h>
+#include <string.h>
 
-unsigned char crowpuke[] = "\x02\x02\x02\x01\x01\x01\x00\x00\x00\xd3\x43\x49\x43";
+/* place encoded shellcode here */
+unsigned char crowPuke[] = "\x22\x30\x73\xe7\xcf\xe7\xf1";
+
 [snip...]
 ```
 
-now, we just run it:
+now, we compile, and we can decrypt the encrypted shellcode:
 
-```c
-PS C:\xorcrypt> .\xordecrypter.exe
-(+) decoded 14-bytes
+```cpp
+PS C:\xorcrypt> .\xordecrypter.exe cr0w_waz_here_666
+(*) decoding with key: cr0w_waz_here_666
+(+) decoded 8-bytes
 
-unsigned char crowpuke[] = "\x41\x41\x41\x42\x42\x42\x43\x43\x43\x90\x00\x0a\x00";
+unsigned char crowPuke[] = "\x41\x42\x43\x90\x90\x90\x90";
 ```
 
-## todo
+we get our original shellcode back!
 
-- ~~add in support for bigger keysizes (right now, the program takes in a single char for a key)~~  `✅`
-- ~~specify key from command-line~~ `✅`
+## `🔮` for the future
+
+- ~~`make the key sizes larger (as of writing this, the encryption only works with single chars)`~~ `✅`
+- ~~`specify the key from the command line`~~ `✅`
+- `add in support for supplying shellcode via as a file or through commandline somehow`
