@@ -2,7 +2,7 @@
 #include <string.h>
 
 /* place encoded shellcode here */
-unsigned char crowPuke[] = "encryptedshellcode";
+unsigned char crowPuke[] = "encryptedblackbird";
 
 int main(int argc, char* argv[]) {
 
@@ -24,5 +24,5 @@ int main(int argc, char* argv[]) {
 
 	printf("\";");
 	return 0;
-	
+
 }
