@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /* place encoded shellcode here */
-unsigned char crowpuke[] = "blackbird";
+unsigned char crowPuke[] = "blackbird";
 
 int main(int argc, char* argv[]) {
 
@@ -11,12 +11,12 @@ int main(int argc, char* argv[]) {
 	}
 
 	char key = argv[1][0]; /* get key from user */
-    
+
     printf("(*) encoding with key: %c\n", key);
-    printf("(+) encoded %zd-bytes\n\n\r", sizeof(crowpuke));
-    printf("unsigned char crowpuke[] = \"");
-    for (int x = 0; x < sizeof(crowpuke); x++) {
-        printf("\\x%02x", crowpuke[x] ^ key);
+    printf("(+) encoded %zd-bytes\n\n\r", sizeof(crowPuke));
+    printf("unsigned char crowPuke[] = \"");
+    for (int x = 0; x < sizeof(crowPuke); x++) {
+        printf("\\x%02x", crowPuke[x] ^ key);
     }
 
     printf("\";");
