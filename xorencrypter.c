@@ -2,7 +2,7 @@
 #include <string.h>
 
 /* place encoded shellcode here */
-unsigned char crowPuke[] = "\x41\x41\x41\x42\x42\x42\x43\x43\x43\x90\x90\x90";
+unsigned char crowPuke[] = "blackbird";
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
