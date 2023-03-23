@@ -7,8 +7,8 @@ unsigned char crowPuke[] = "blackbird";
 int main(int argc, char* argv[]) {
 
         if (argc < 2) {
-                    printf("(-) usage: xorencrypter.exe <key>\n");
-                    return 1;
+                printf("(-) usage: xorencrypter.exe <key>\n");
+                return 1;
         }
 
         const char* key = argv[1]; /* get key from user */
