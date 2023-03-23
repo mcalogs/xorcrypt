@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-/* place encoded shellcode here */
+/* place shellcode here */
 unsigned char crowPuke[] = "blackbird";
 
 int main(int argc, char* argv[]) {
