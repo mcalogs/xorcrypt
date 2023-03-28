@@ -21,8 +21,8 @@ int main(int argc, char* argv[]) {
 		crowPuke[x] = crowPuke[x] ^ key[x % keyLength];
 		printf("\\x%02x", crowPuke[x]);
 	}
-
 	printf("\";");
+	
 	return 0;
 
 }
